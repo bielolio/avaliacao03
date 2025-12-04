@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoventure - Pacotes de Viagem</title>
+    <link rel="stylesheet" href="pacotes.css">
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              
+              'ecogreen': '#28a745', 
+              'ecogreen-dark': '#1e7e34', 
+              'gray-darkest': '#343a40',
+            },
+            fontFamily: {
+              
+              sans: ['Inter', 'sans-serif'],
+            }
+          }
+        }
+      }
+    </script>
+  
+</head>
+<body class="bg-gray-50 text-gray-800 min-h-screen">
+    <header class="bg-gray-darkest text-white shadow-xl p-4 md:p-6 flex justify-between items-center sticky top-0 z-10">
+        <div class="text-xl md:text-2xl font-extrabold flex items-center logo">
+            <i class="fas fa-leaf mr-2 text-ecogreen"></i>Ecoventure
+        </div>
+        <nav>
+            <ul class="flex space-x-4 md:space-x-8">
+                <li><a href="pacotes.html" class="text-white hover:text-ecogreen transition duration-300 font-semibold p-2 rounded">Pacotes</a></li> 
+                <li><a href="login.html" class="bg-ecogreen hover:bg-ecogreen-dark text-white font-bold py-2 px-4 rounded-lg transition duration-300 flex items-center shadow-md">
+                    <i class="fas fa-sign-in-alt mr-2"></i> Login
+                </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8 mt-10">
+        <h1 class="text-3xl md:text-4xl font-extrabold text-gray-darkest mb-10 text-center tracking-tight border-b-4 border-ecogreen pb-3">
+            <i class="fas fa-plane mr-2 text-ecogreen"></i> Nossos Pacotes de Viagem
+        </h1>
+        
+        <div class="bg-white shadow-2xl rounded-xl overflow-hidden border border-gray-100">
+            <table class="w-full text-left table-auto">
+                <thead>
+                    <tr class="bg-gray-darkest text-white uppercase text-sm tracking-wider">
+                        <th class="col-index text-center rounded-tl-xl">#</th>
+                        <th class="col-origem">Origem</th>
+                        <th class="col-destino">Destino</th>
+                        <th class="col-acao rounded-tr-xl"></th>
+                    </tr>
+                </thead>
+                <tbody>
+     
+                    <tr class="border-b border-gray-200 transition duration-300 hover:bg-ecogreen/10">
+                        <td class="col-index font-semibold text-gray-600">1</td>
+                        <td class="col-origem font-medium text-gray-700">São Paulo</td>
+                        <td class="col-destino font-medium text-ecogreen font-semibold">Chapada Diamantina (BA)</td>
+                        <td class="col-acao">
+                            <a href="pacotes.html" class="saber-mais bg-gray-500 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 w-full flex items-center justify-center text-sm">
+                                <i class="fas fa-chevron-right mr-2"></i>Saiba mais
+                            </a>
+                        </td>
+                    </tr>
+           
+                    <tr class="border-b border-gray-200 transition duration-300 hover:bg-ecogreen/10 bg-gray-100">
+                        <td class="col-index font-semibold text-gray-600">2</td>
+                        <td class="col-origem font-medium text-gray-700">Rio de Janeiro</td>
+                        <td class="col-destino font-medium text-ecogreen font-semibold">Amazônia (AM)</td>
+                        <td class="col-acao">
+                            <a href="pacotes.html" class="saber-mais bg-gray-500 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 w-full flex items-center justify-center text-sm">
+                                <i class="fas fa-chevron-right mr-2"></i>Saiba mais
+                            </a>
+                        </td>
+                    </tr>
+     
+                    <tr class="border-b border-gray-200 transition duration-300 hover:bg-ecogreen/10">
+                        <td class="col-index font-semibold text-gray-600">3</td>
+                        <td class="col-origem font-medium text-gray-700">Belo Horizonte</td>
+                        <td class="col-destino font-medium text-ecogreen font-semibold">Bonito (MS)</td>
+                        <td class="col-acao">
+                            <a href="pacotes.html" class="saber-mais bg-gray-500 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 w-full flex items-center justify-center text-sm">
+                                <i class="fas fa-chevron-right mr-2"></i>Saiba mais
+                            </a>
+                        </td>
+                    </tr>
+                    
+                    <tr class="border-b border-gray-200 transition duration-300 hover:bg-ecogreen/10 bg-gray-100">
+                        <td class="col-index font-semibold text-gray-600">4</td>
+                        <td class="col-origem font-medium text-gray-700">Brasília</td>
+                        <td class="col-destino font-medium text-ecogreen font-semibold">Pantanal (MT)</td>
+                        <td class="col-acao">
+                            <a href="pacotes.html" class="saber-mais bg-gray-500 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 w-full flex items-center justify-center text-sm">
+                                <i class="fas fa-chevron-right mr-2"></i>Saiba mais
+                            </a>
+                        </td>
+                    </tr>
+                   
+                    <tr class="transition duration-300 hover:bg-ecogreen/10">
+                        <td class="col-index font-semibold text-gray-600 rounded-bl-xl">5</td>
+                        <td class="col-origem font-medium text-gray-700">Curitiba</td>
+                        <td class="col-destino font-medium text-ecogreen font-semibold">Serras Gaúchas (RS)</td>
+                        <td class="col-acao rounded-br-xl">
+                            <a href="pacotes.html" class="saber-mais bg-gray-500 hover:bg-gray-700 text-white font-semibold py-2 px-4 rounded-lg shadow-md hover:shadow-lg transition duration-300 w-full flex items-center justify-center text-sm">
+                                <i class="fas fa-chevron-right mr-2"></i>Saiba mais
+                            </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer class="bg-gray-darkest text-gray-300 py-8 mt-12 shadow-inner">
+        <div class="max-w-6xl mx-auto px-4 md:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center pb-4 border-b border-gray-700">
+                <div class="text-xl font-bold flex items-center mb-4 md:mb-0 footer-logo">
+                    <i class="fas fa-leaf mr-2 text-ecogreen"></i>Ecoventure
+                </div>
+                <p class="text-center md:text-left text-sm flex-grow mx-0 md:mx-10 mb-4 md:mb-0">
+                    A Ecoventure é a sua porta de entrada para experiências de ecoturismo inesquecíveis no Brasil.
+                </p>
+                <div class="flex space-x-4 social-icons">
+                    <a href="#"><i class="fab fa-facebook-f text-lg"></i></a>
+                    <a href="#"><i class="fab fa-instagram text-lg"></i></a>
+                    <a href="#"><i class="fab fa-twitter text-lg"></i></a>
+                </div>
+            </div>
+            <p class="text-center text-xs mt-4 copyright">&copy; 2025 Ecoventure. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

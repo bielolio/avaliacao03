@@ -1,0 +1,15 @@
+body {
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+td, th {
+    padding: 1rem 0.75rem; 
+    vertical-align: middle;
+}
+
+.col-index { width: 5%; text-align: center; }
+.col-origem { width: 35%; }
+.col-destino { width: 35%; }
+.col-acao { width: 25%; }
