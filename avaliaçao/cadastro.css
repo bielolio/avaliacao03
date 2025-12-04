@@ -1,0 +1,273 @@
+:root {
+    --cor-fundo-principal: #e0e0e0;
+    --cor-fundo-header-footer: #333333;
+    --cor-texto-claro: #ffffff;
+    --cor-texto-escuro: #444444;
+    --cor-destaque: #28a745;
+    --cor-botao-primario: #282828;
+    --cor-borda-botao-secundario: #a9a9a9;
+    --cor-radio-selected: #28a745;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--cor-fundo-principal);
+    color: var(--cor-texto-escuro);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+}
+button {
+    border: none;
+    outline: none;
+}
+
+.header {
+    background-color: var(--cor-fundo-header-footer);
+    color: var(--cor-texto-claro);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--cor-texto-claro);
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu a {
+    color: var(--cor-texto-claro);
+    text-decoration: none;
+    margin-left: 25px;
+    font-size: 1em;
+    padding: 5px 10px;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover:not(.cadastro-btn) {
+    color: var(--cor-destaque);
+}
+
+.nav-menu a.cadastro-btn {
+    background-color: var(--cor-destaque);
+    border-radius: 4px;
+    color: var(--cor-texto-claro);
+    padding: 5px 10px;
+}
+
+.nav-menu a.login-btn {
+   
+    border: 1px solid var(--cor-texto-claro);
+    padding: 5px 10px;
+}
+
+.main-container {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.cadastro-box {
+    width: 100%;
+    max-width: 450px;
+    padding: 30px 20px;
+    background-color: transparent;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo-cadastro {
+    font-size: 2em;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: var(--cor-texto-escuro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.input-grupo {
+    width: 100%;
+    margin-bottom: 30px;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.input-label {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    font-size: 0.9em;
+    color: var(--cor-texto-escuro);
+}
+
+.input-field, .input-select {
+    width: 100%;
+    padding: 10px 0;
+    border: none;
+    border-bottom: 1px solid var(--cor-texto-escuro);
+    background: transparent;
+    outline: none;
+    font-size: 1.1em;
+    color: var(--cor-texto-escuro);
+    box-sizing: border-box;
+}
+
+.input-field:focus, .input-select:focus {
+    border-bottom: 2px solid var(--cor-destaque);
+}
+
+.input-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23444444" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/><path d="M0 0h24v24H0z" fill="none"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: 20px;
+    cursor: pointer;
+}
+
+.radio-title {
+    font-size: 1em;
+    font-weight: bold;
+    color: var(--cor-texto-escuro);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.radio-grupo {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+.radio-opcao {
+    display: inline-block; 
+    margin-right: 20px;
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 1em;
+    user-select: none;
+}
+
+.radio-opcao input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.radio-checkmark {
+    position: absolute;
+    top: 2px;
+    left: 0;
+    height: 18px;
+    width: 18px;
+    background-color: #eee;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    transition: all 0.2s;
+}
+
+.radio-opcao:hover input ~ .radio-checkmark {
+    background-color: #cccccc;
+}
+
+.radio-opcao input:checked ~ .radio-checkmark {
+    background-color: var(--cor-radio-selected);
+    border-color: var(--cor-radio-selected);
+}
+
+.radio-checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.radio-opcao input:checked ~ .radio-checkmark:after {
+    display: block;
+}
+
+.radio-opcao .radio-checkmark:after {
+    top: 5px;
+    left: 5px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+
+.cta-button {
+    background-color: var(--cor-destaque);
+    color: var(--cor-texto-claro);
+    padding: 12px 20px;
+    border-radius: 4px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 300px;
+}
+
+.cta-button:hover {
+    background-color: #218838;
+}
+
+.footer {
+    background-color: var(--cor-fundo-header-footer);
+    color: var(--cor-texto-claro);
+    padding: 15px 50px;
+    text-align: center;
+    font-size: 0.9em;
+    margin-top: auto;
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+    .nav-menu {
+        margin-top: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .nav-menu a {
+        margin: 5px 10px;
+    }
+    .cadastro-box {
+        padding: 20px 10px;
+    }
+}
